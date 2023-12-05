@@ -1,0 +1,95 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+.label-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.select-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px; /* Add space between dropdown and tiles */
+  margin-bottom: 90px;
+
+}
+
+.select-container select {
+  width: 200px; /* Set a fixed width for better alignment */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #99b2dd; /* Border color for the dropdown */
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333; /* Text color for the dropdown */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Add transition for a smoother effect */
+}
+
+.select-container select:focus {
+  outline: none;
+  border-color: #6c757d; /* Adjusted border color when focused */
+}
+
+.select-container:after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center; /* Center the tiles */
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tile {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  background-color: #3a405a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.tile:nth-child(odd) {
+  background-color: #99b2dd;
+}
+.tile:nth-child(even) {
+  background-color: #99b2dd;
+}
+.tile h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tile p {
+  color: #555;
+}
